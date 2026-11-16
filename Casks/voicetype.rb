@@ -8,7 +8,7 @@ cask "voicetype" do
   homepage "https://github.com/CurlyRishabh/VoiceType"
 
   depends_on arch: :arm64
-  depends_on macos: ":sequoia"
+  depends_on macos: :sequoia  
 
   app "VoiceType.app"
 
