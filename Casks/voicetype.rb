@@ -1,6 +1,6 @@
 cask "voicetype" do
-  version "1.0"
-  sha256 "de855c79c9ed0855c3246fc160e2e883170b23ce49188ec591bd652f23636955"
+  version "1.1"
+  sha256 "af609b2d377812629c05b9d1dae942b82d8ce93394ed301af6743b54cbe153ae"
 
   url "https://github.com/CurlyRishabh/VoiceType/releases/download/v#{version}/VoiceType.dmg"
   name "VoiceType"
@@ -8,7 +8,8 @@ cask "voicetype" do
   homepage "https://github.com/CurlyRishabh/VoiceType"
 
   depends_on arch: :arm64
-  depends_on macos: :sequoia  
+  depends_on macos: :sequoia
+  depends_on cask: "curlyrishabh/tap/voicetype-model"
 
   app "VoiceType.app"
 
@@ -18,8 +19,8 @@ cask "voicetype" do
   caveats <<~EOS
     First launch: if macOS blocks it, go to
       System Settings > Privacy & Security > Open Anyway
-    Speech models (one time, ~660 MB):
-      https://github.com/CurlyRishabh/VoiceType/releases/latest/download/VoiceTypeModels.zip
-    Unzip, then VoiceType > Models > Import models folder.
+    The speech model (voicetype-model cask) lives in
+      ~/Library/Application Support/VoiceType/Models
+    and is kept across VoiceType updates.
   EOS
 end
