@@ -1,6 +1,6 @@
 cask "voicetype" do
-  version "1.1"
-  sha256 "af609b2d377812629c05b9d1dae942b82d8ce93394ed301af6743b54cbe153ae"
+  version "1.2"
+  sha256 "09964020653487fcbab3b42993e9ece2bdb683706a6c9e1cc719ba9625f2027e"
 
   url "https://github.com/CurlyRishabh/VoiceType/releases/download/v#{version}/VoiceType.dmg"
   name "VoiceType"
